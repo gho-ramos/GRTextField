@@ -10,7 +10,7 @@
 #import "NSString+Extension.h"
 
 @interface GRTextField()
-@property (nonatomic, strong) id<UITextFieldDelegate> _delegate;
+@property (nonatomic, strong) id<UITextFieldDelegate> extension;
 @property (nonatomic, strong) CALayer *border;
 @end
 
@@ -20,7 +20,7 @@
 NSString *const selectionRangeKey = @"selectionRange";
 -(void)awakeFromNib {
     [super awakeFromNib];
-    
+    [super setDelegate:self];
     if (self.hasBorder) {
         self.borderStyle = UITextBorderStyleNone;
     }
@@ -40,16 +40,11 @@ NSString *const selectionRangeKey = @"selectionRange";
 
 #pragma mark - Getters and Setters
 -(void)setDelegate:(id<UITextFieldDelegate>)delegate {
-    self._delegate = delegate;
+    self.extension = delegate;
 }
 
 -(void)setMaskPattern:(NSString *)maskPattern {
     _maskPattern = maskPattern;
-    id<UITextFieldDelegate> dlgt = nil;
-    if (_maskPattern) {
-        dlgt = self;
-    }
-    [super setDelegate:dlgt];
 }
 
 -(void)setBorder:(CALayer *)border {
@@ -73,40 +68,40 @@ NSString *const selectionRangeKey = @"selectionRange";
 #pragma mark - UITextFieldDelegate implementations
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    if ([self._delegate respondsToSelector:@selector(textFieldShouldBeginEditing:)]) {
-        return [self._delegate textFieldShouldBeginEditing:textField];
+    if ([self.extension respondsToSelector:@selector(textFieldShouldBeginEditing:)]) {
+        return [self.extension textFieldShouldBeginEditing:textField];
     }
     return YES;
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
-    if ([self._delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
-        [self._delegate textFieldDidBeginEditing:textField];
+    if ([self.extension respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
+        [self.extension textFieldDidBeginEditing:textField];
     }
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    if ([self._delegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
-        return [self._delegate textFieldShouldEndEditing:textField];
+    if ([self.extension respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
+        return [self.extension textFieldShouldEndEditing:textField];
     }
     return YES;
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField {
-    if ([self._delegate respondsToSelector:@selector(textFieldDidEndEditing:)]) {
-        [self._delegate textFieldDidEndEditing:textField];
+    if ([self.extension respondsToSelector:@selector(textFieldDidEndEditing:)]) {
+        [self.extension textFieldDidEndEditing:textField];
     }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason NS_AVAILABLE_IOS(10_0) {
-    if ([self._delegate respondsToSelector:@selector(textFieldDidEndEditing:reason:)]) {
-        [self._delegate textFieldDidEndEditing:textField reason:reason];
+    if ([self.extension respondsToSelector:@selector(textFieldDidEndEditing:reason:)]) {
+        [self.extension textFieldDidEndEditing:textField reason:reason];
     }
 }
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    if ([self._delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)] &&
-        ![self._delegate textField:textField shouldChangeCharactersInRange:range replacementString:string]) {
+    if ([self.extension respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)] &&
+        ![self.extension textField:textField shouldChangeCharactersInRange:range replacementString:string]) {
         return NO;
     }
     
@@ -123,15 +118,15 @@ NSString *const selectionRangeKey = @"selectionRange";
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
-    if ([self._delegate respondsToSelector:@selector(textFieldShouldClear:)]) {
-        return [self._delegate textFieldShouldClear:textField];
+    if ([self.extension respondsToSelector:@selector(textFieldShouldClear:)]) {
+        return [self.extension textFieldShouldClear:textField];
     }
     return YES;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ([self._delegate respondsToSelector:@selector(textFieldShouldReturn:)]) {
-        return [self._delegate textFieldShouldReturn:textField];
+    if ([self.extension respondsToSelector:@selector(textFieldShouldReturn:)]) {
+        return [self.extension textFieldShouldReturn:textField];
     }
     return YES;
 }
