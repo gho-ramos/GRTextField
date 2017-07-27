@@ -30,6 +30,8 @@ NSString *const selectionRangeKey = @"selectionRange";
     }
     
     if (self.errorLabel) {
+        self.errorLabel.text = @"";
+        
         [self.errorLabel setHidden:YES];
         self.errorLabel.textColor = [UIColor redColor];
         
@@ -70,6 +72,14 @@ NSString *const selectionRangeKey = @"selectionRange";
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if ([self.extension respondsToSelector:@selector(textFieldShouldBeginEditing:)]) {
         return [self.extension textFieldShouldBeginEditing:textField];
+    }
+    if (self.border && self.errorLabel && [NSString isNullOrEmpty:self.errorLabel.text]) {
+        self.border.backgroundColor = [UIColor blueColor].CGColor;
+        self.border.frame = ({
+            CGRect frame = self.border.frame;
+            frame.size.height = 2;
+            frame;
+        });
     }
     return YES;
 }
@@ -151,6 +161,8 @@ NSString *const selectionRangeKey = @"selectionRange";
 }
 
 - (void)setError:(BOOL)visible {
+    CGColorRef color = [UIColor lightGrayColor].CGColor;
+    NSInteger height = 1;
     if (visible) {
         // Check if there is a localized string for the specified key, otherwise use the key itself
         NSString *error = [self.errorMessageKey localized];
@@ -159,21 +171,21 @@ NSString *const selectionRangeKey = @"selectionRange";
         }
         self.errorLabel.text = error;
         [self resizeErrorLabelToFit];
-        
-        self.border.backgroundColor = [UIColor redColor].CGColor;
-        self.border.frame = ({
-            CGRect frame = self.border.frame;
-            frame.size.height = 2;
-            frame;
-        });
+        color = [UIColor redColor].CGColor;
+        height = 2;
     } else {
-        self.border.backgroundColor = [UIColor lightGrayColor].CGColor;
-        self.border.frame = ({
-            CGRect frame = self.border.frame;
-            frame.size.height = 1;
-            frame;
-        });
+        self.errorLabel.text = @"";
+        if ([self isFirstResponder]) {
+            color = [UIColor blueColor].CGColor;
+            height = 2;
+        }
     }
+    self.border.backgroundColor = color;
+    self.border.frame = ({
+        CGRect frame = self.border.frame;
+        frame.size.height = height;
+        frame;
+    });
     [self.errorLabel setHidden:!visible];
 }
 
