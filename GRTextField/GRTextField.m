@@ -119,12 +119,12 @@ NSString *const selectionRangeKey = @"selectionRange";
     
     if (self.maskPattern) {
         textField.text = [text maskWithPattern:self.maskPattern];
-        
-        if(![NSString isNullOrEmpty:textField.text] && (self.errorLabel && !self.errorLabel.isHidden)) {
-            [self setError:NO];
-        }
     } else {
         textField.text = text;
+    }
+    
+    if(![NSString isNullOrEmpty:textField.text] && (self.errorLabel && !self.errorLabel.isHidden)) {
+        [self setError:NO];
     }
     
     return NO;
