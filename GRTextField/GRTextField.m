@@ -105,13 +105,16 @@ NSString *const selectionRangeKey = @"selectionRange";
         return NO;
     }
     
+    NSString *text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
     if (self.maskPattern) {
-        NSString *mutableString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-        textField.text = [mutableString maskWithPattern:self.maskPattern];
+        textField.text = [text maskWithPattern:self.maskPattern];
         
         if(![NSString isNullOrEmpty:textField.text] && (self.errorLabel && !self.errorLabel.isHidden)) {
             [self setError:NO];
         }
+    } else {
+        textField.text = text;
     }
     
     return NO;
