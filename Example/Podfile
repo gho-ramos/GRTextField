@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GRTextField_Example' do
+  pod 'GRTextField', :path => '../'
+
+  target 'GRTextField_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
