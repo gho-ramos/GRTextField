@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2859D22DEF548882AFD39A5CB1A583D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		2AAAA754CE4767BE173C69A7BE2C055D /* NSString+GRTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = DE05294B352C814196DA4B2C12AB06F3 /* NSString+GRTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AAB3CB59A28327857DE9E571E575700 /* Pods-GRTextField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 784AF6BB8F46049E27BE5E33CD432288 /* Pods-GRTextField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55747100C1384B4114AB2B40E7F259FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		61B3D5C977F2F44A7AB7E2EA53A7C8A0 /* GRTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4D5F7E43297401061CA7F0C85818FE /* GRTextField-dummy.m */; };
+		6563616D623F767CD4C5890E2D31D37A /* GRTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6713267BC740D59F0A8D98FD59AEE6F3 /* GRTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65780D637B819AB02A63A4FD4DBE63C4 /* Pods-GRTextField_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A3044BD72B773AC881DEAB1CABC87E1 /* Pods-GRTextField_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A786081173316B0A108096B23EF559F /* GRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 299FE1C717D5BEAD1757071C8BF530F0 /* GRTextField.m */; };
+		80AA607262442F028BD441189484F40C /* Pods-GRTextField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C05C655D235E77EE662E1B7A73DABCA /* Pods-GRTextField_Example-dummy.m */; };
+		B77086BF8AB2F100B4655F802398D7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		BF07F3E9D55360382F94346AE03D217C /* NSString+GRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3EC280A449970FC31F72EA7329FECB /* NSString+GRTextField.m */; };
+		C7B7E020B00C2FE0D0EF87238891A872 /* Pods-GRTextField_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B056FEF9DD0001C6868FA986CEB3A2A0 /* Pods-GRTextField_Tests-dummy.m */; };
+		EB673D2DA5B69A2FE3ED7CD0EC058982 /* GRTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88A56C3A317ED9D63748E5A4148F4871 /* GRTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12C60CB3E1377E7D7A8CD290E7EB95F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E411D2CACB96060AEA63511A55D568DD;
+			remoteInfo = GRTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0152979B2E393C216D9086CD9154E1BF /* GRTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GRTextField.modulemap; sourceTree = "<group>"; };
+		11F14C72D25F30F90E2573E7B4388251 /* Pods-GRTextField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GRTextField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		16EB2433FB82902BACDE97223A60BAC7 /* Pods-GRTextField_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Tests-resources.sh"; sourceTree = "<group>"; };
+		271F6E9284C20B707209C1D30A7DE6A9 /* Pods-GRTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GRTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
+		299FE1C717D5BEAD1757071C8BF530F0 /* GRTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GRTextField.m; sourceTree = "<group>"; };
+		51A660C0B55BF54F69D1287508575EB6 /* Pods-GRTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GRTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		577B1A9A0A0783DDEE9E721070773100 /* Pods-GRTextField_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GRTextField_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5A3044BD72B773AC881DEAB1CABC87E1 /* Pods-GRTextField_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GRTextField_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5EA5F60E3771B0FA19B2DF607EBD50C0 /* Pods-GRTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GRTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		610CB74C2F8AB5D05C39F20A2938E1A9 /* GRTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GRTextField.xcconfig; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6713267BC740D59F0A8D98FD59AEE6F3 /* GRTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GRTextField.h; sourceTree = "<group>"; };
+		69268012272FE54FF3538ADC8948BC6F /* Pods_GRTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GRTextField_Tests.framework; path = "Pods-GRTextField_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		729A57FECCCD20C41B1A4BE5BB419D27 /* GRTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GRTextField-prefix.pch"; sourceTree = "<group>"; };
+		784AF6BB8F46049E27BE5E33CD432288 /* Pods-GRTextField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GRTextField_Example-umbrella.h"; sourceTree = "<group>"; };
+		88A56C3A317ED9D63748E5A4148F4871 /* GRTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GRTextField-umbrella.h"; sourceTree = "<group>"; };
+		8C05C655D235E77EE662E1B7A73DABCA /* Pods-GRTextField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GRTextField_Example-dummy.m"; sourceTree = "<group>"; };
+		902577C8AFA2AA3E8A9DF6E232572118 /* Pods-GRTextField_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9639B41995EA5F75C5FDB00F581A8BAB /* Pods-GRTextField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GRTextField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B056FEF9DD0001C6868FA986CEB3A2A0 /* Pods-GRTextField_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GRTextField_Tests-dummy.m"; sourceTree = "<group>"; };
+		B833B80451025FA1DC73A4952379F0E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3A2E8441AF23A1B58F0034E8635764B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB4D5F7E43297401061CA7F0C85818FE /* GRTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GRTextField-dummy.m"; sourceTree = "<group>"; };
+		CDA1CCA67CFC41F65A6FD0CD36D92B0C /* Pods-GRTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GRTextField_Example.modulemap"; sourceTree = "<group>"; };
+		CFAEF6D2913AAC3D95EC575B86BCDEA2 /* Pods-GRTextField_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GRTextField_Tests.modulemap"; sourceTree = "<group>"; };
+		DD56A84A8050CE59EAB0908401E10718 /* Pods-GRTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GRTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DE05294B352C814196DA4B2C12AB06F3 /* NSString+GRTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+GRTextField.h"; sourceTree = "<group>"; };
+		E5C1BA873CC7C559699EF6AD8C917D32 /* Pods-GRTextField_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Example-resources.sh"; sourceTree = "<group>"; };
+		ED701134581E6B4F9BB0B199DFC7142F /* Pods-GRTextField_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GRTextField_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F08A41217C85DF2078DF65364FF757A2 /* Pods-GRTextField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F1538180F4DF55BA602780AD062407E3 /* Pods_GRTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GRTextField_Example.framework; path = "Pods-GRTextField_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34A8A1AA45D95B1147A132B69D6739B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB5E93A44855EB01546BE6A102F4BFF /* GRTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GRTextField.framework; path = GRTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3EC280A449970FC31F72EA7329FECB /* NSString+GRTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+GRTextField.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		323F89DC463F84191CE6BB87EA781D85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55747100C1384B4114AB2B40E7F259FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45588199F698C34A8378725193461F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2859D22DEF548882AFD39A5CB1A583D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7764B76B65F3C8A0EF95BDD12DF71BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B77086BF8AB2F100B4655F802398D7D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26E9E5E9A5185838FA4A08ADEEB51A95 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0152979B2E393C216D9086CD9154E1BF /* GRTextField.modulemap */,
+				610CB74C2F8AB5D05C39F20A2938E1A9 /* GRTextField.xcconfig */,
+				CB4D5F7E43297401061CA7F0C85818FE /* GRTextField-dummy.m */,
+				729A57FECCCD20C41B1A4BE5BB419D27 /* GRTextField-prefix.pch */,
+				88A56C3A317ED9D63748E5A4148F4871 /* GRTextField-umbrella.h */,
+				F34A8A1AA45D95B1147A132B69D6739B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GRTextField";
+			sourceTree = "<group>";
+		};
+		27CDAD8198837B8D655CFE5919C5F718 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAF9EC4950A4285142E1D7C533214C3F /* Pods-GRTextField_Example */,
+				ED0A3D8E9A156884BBAF9106DCE1A869 /* Pods-GRTextField_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		445B157FEF385290A03C9F55C56A71F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE05294B352C814196DA4B2C12AB06F3 /* NSString+GRTextField.h */,
+				FD3EC280A449970FC31F72EA7329FECB /* NSString+GRTextField.m */,
+			);
+			name = Extensions;
+			path = GRTextField/Extensions;
+			sourceTree = "<group>";
+		};
+		49BF3D2F665CA24A8153D0153032327B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6713267BC740D59F0A8D98FD59AEE6F3 /* GRTextField.h */,
+				299FE1C717D5BEAD1757071C8BF530F0 /* GRTextField.m */,
+			);
+			name = Classes;
+			path = GRTextField/Classes;
+			sourceTree = "<group>";
+		};
+		676D70EE35DE3614EFDAB3070049B016 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D562B906845078909AB26915A59E35C /* GRTextField */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				676D70EE35DE3614EFDAB3070049B016 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				E7DD5100FD0BB4C1D83B431B2CAB4CAA /* Products */,
+				27CDAD8198837B8D655CFE5919C5F718 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9D562B906845078909AB26915A59E35C /* GRTextField */ = {
+			isa = PBXGroup;
+			children = (
+				49BF3D2F665CA24A8153D0153032327B /* Classes */,
+				445B157FEF385290A03C9F55C56A71F0 /* Extensions */,
+				26E9E5E9A5185838FA4A08ADEEB51A95 /* Support Files */,
+			);
+			name = GRTextField;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E7DD5100FD0BB4C1D83B431B2CAB4CAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5E93A44855EB01546BE6A102F4BFF /* GRTextField.framework */,
+				F1538180F4DF55BA602780AD062407E3 /* Pods_GRTextField_Example.framework */,
+				69268012272FE54FF3538ADC8948BC6F /* Pods_GRTextField_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAF9EC4950A4285142E1D7C533214C3F /* Pods-GRTextField_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C3A2E8441AF23A1B58F0034E8635764B /* Info.plist */,
+				CDA1CCA67CFC41F65A6FD0CD36D92B0C /* Pods-GRTextField_Example.modulemap */,
+				9639B41995EA5F75C5FDB00F581A8BAB /* Pods-GRTextField_Example-acknowledgements.markdown */,
+				11F14C72D25F30F90E2573E7B4388251 /* Pods-GRTextField_Example-acknowledgements.plist */,
+				8C05C655D235E77EE662E1B7A73DABCA /* Pods-GRTextField_Example-dummy.m */,
+				F08A41217C85DF2078DF65364FF757A2 /* Pods-GRTextField_Example-frameworks.sh */,
+				E5C1BA873CC7C559699EF6AD8C917D32 /* Pods-GRTextField_Example-resources.sh */,
+				784AF6BB8F46049E27BE5E33CD432288 /* Pods-GRTextField_Example-umbrella.h */,
+				5EA5F60E3771B0FA19B2DF607EBD50C0 /* Pods-GRTextField_Example.debug.xcconfig */,
+				271F6E9284C20B707209C1D30A7DE6A9 /* Pods-GRTextField_Example.release.xcconfig */,
+			);
+			name = "Pods-GRTextField_Example";
+			path = "Target Support Files/Pods-GRTextField_Example";
+			sourceTree = "<group>";
+		};
+		ED0A3D8E9A156884BBAF9106DCE1A869 /* Pods-GRTextField_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B833B80451025FA1DC73A4952379F0E4 /* Info.plist */,
+				CFAEF6D2913AAC3D95EC575B86BCDEA2 /* Pods-GRTextField_Tests.modulemap */,
+				ED701134581E6B4F9BB0B199DFC7142F /* Pods-GRTextField_Tests-acknowledgements.markdown */,
+				577B1A9A0A0783DDEE9E721070773100 /* Pods-GRTextField_Tests-acknowledgements.plist */,
+				B056FEF9DD0001C6868FA986CEB3A2A0 /* Pods-GRTextField_Tests-dummy.m */,
+				902577C8AFA2AA3E8A9DF6E232572118 /* Pods-GRTextField_Tests-frameworks.sh */,
+				16EB2433FB82902BACDE97223A60BAC7 /* Pods-GRTextField_Tests-resources.sh */,
+				5A3044BD72B773AC881DEAB1CABC87E1 /* Pods-GRTextField_Tests-umbrella.h */,
+				51A660C0B55BF54F69D1287508575EB6 /* Pods-GRTextField_Tests.debug.xcconfig */,
+				DD56A84A8050CE59EAB0908401E10718 /* Pods-GRTextField_Tests.release.xcconfig */,
+			);
+			name = "Pods-GRTextField_Tests";
+			path = "Target Support Files/Pods-GRTextField_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2D969789C70DBDD202C3966840BFBAEC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65780D637B819AB02A63A4FD4DBE63C4 /* Pods-GRTextField_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C3D7DA557596C46589BF4F41B8AE2E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB673D2DA5B69A2FE3ED7CD0EC058982 /* GRTextField-umbrella.h in Headers */,
+				6563616D623F767CD4C5890E2D31D37A /* GRTextField.h in Headers */,
+				2AAAA754CE4767BE173C69A7BE2C055D /* NSString+GRTextField.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ECF1569F9FB5F6AB3E9EC4A6552C9C5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AAB3CB59A28327857DE9E571E575700 /* Pods-GRTextField_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4743A4BD2A2011B8085B336C1B073CDB /* Pods-GRTextField_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 156ED2DF29E2CE68D521C72D4FA4B7BD /* Build configuration list for PBXNativeTarget "Pods-GRTextField_Example" */;
+			buildPhases = (
+				01CC1B43AEE66C5FA03B58E881A99288 /* Sources */,
+				323F89DC463F84191CE6BB87EA781D85 /* Frameworks */,
+				5ECF1569F9FB5F6AB3E9EC4A6552C9C5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB3465D961AC5F646D1F9488CB099136 /* PBXTargetDependency */,
+			);
+			name = "Pods-GRTextField_Example";
+			productName = "Pods-GRTextField_Example";
+			productReference = F1538180F4DF55BA602780AD062407E3 /* Pods_GRTextField_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E411D2CACB96060AEA63511A55D568DD /* GRTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B277F87F708DB9D41DFEA911FFDD2ABC /* Build configuration list for PBXNativeTarget "GRTextField" */;
+			buildPhases = (
+				446859786890E142EAB162EBAF52B2FB /* Sources */,
+				45588199F698C34A8378725193461F6D /* Frameworks */,
+				3C3D7DA557596C46589BF4F41B8AE2E6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GRTextField;
+			productName = GRTextField;
+			productReference = FAB5E93A44855EB01546BE6A102F4BFF /* GRTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EF3792CEB8D339DBD1CE48CE1BF5A78B /* Pods-GRTextField_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BDFA493603F6A7F3D4E20C6F030661C /* Build configuration list for PBXNativeTarget "Pods-GRTextField_Tests" */;
+			buildPhases = (
+				90554BEC1A14C20E2F1637BE9768DC59 /* Sources */,
+				A7764B76B65F3C8A0EF95BDD12DF71BE /* Frameworks */,
+				2D969789C70DBDD202C3966840BFBAEC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GRTextField_Tests";
+			productName = "Pods-GRTextField_Tests";
+			productReference = 69268012272FE54FF3538ADC8948BC6F /* Pods_GRTextField_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E7DD5100FD0BB4C1D83B431B2CAB4CAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E411D2CACB96060AEA63511A55D568DD /* GRTextField */,
+				4743A4BD2A2011B8085B336C1B073CDB /* Pods-GRTextField_Example */,
+				EF3792CEB8D339DBD1CE48CE1BF5A78B /* Pods-GRTextField_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01CC1B43AEE66C5FA03B58E881A99288 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AA607262442F028BD441189484F40C /* Pods-GRTextField_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		446859786890E142EAB162EBAF52B2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61B3D5C977F2F44A7AB7E2EA53A7C8A0 /* GRTextField-dummy.m in Sources */,
+				6A786081173316B0A108096B23EF559F /* GRTextField.m in Sources */,
+				BF07F3E9D55360382F94346AE03D217C /* NSString+GRTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90554BEC1A14C20E2F1637BE9768DC59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7B7E020B00C2FE0D0EF87238891A872 /* Pods-GRTextField_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB3465D961AC5F646D1F9488CB099136 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GRTextField;
+			target = E411D2CACB96060AEA63511A55D568DD /* GRTextField */;
+			targetProxy = 12C60CB3E1377E7D7A8CD290E7EB95F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		35E2CBEE09A0D80B9953E48E309A2872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA5F60E3771B0FA19B2DF607EBD50C0 /* Pods-GRTextField_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GRTextField_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GRTextField_Example/Pods-GRTextField_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GRTextField_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74134EE4FC810D71EAA62902FD98C720 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD56A84A8050CE59EAB0908401E10718 /* Pods-GRTextField_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GRTextField_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GRTextField_Tests/Pods-GRTextField_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GRTextField_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2AFB4B8A6D31A385BCA1DF4367FFCC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A660C0B55BF54F69D1287508575EB6 /* Pods-GRTextField_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GRTextField_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GRTextField_Tests/Pods-GRTextField_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GRTextField_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6A03C9B1314C05BD3C2FBD3F65EDF83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BCD0CC17DB2A1056018BE4B40570903B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 271F6E9284C20B707209C1D30A7DE6A9 /* Pods-GRTextField_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GRTextField_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GRTextField_Example/Pods-GRTextField_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GRTextField_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E02FC94D0B78AA7434FA357514573F20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 610CB74C2F8AB5D05C39F20A2938E1A9 /* GRTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GRTextField/GRTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GRTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GRTextField/GRTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GRTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FA61AA1C12AFE453D5CA828B0F10C968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 610CB74C2F8AB5D05C39F20A2938E1A9 /* GRTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GRTextField/GRTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GRTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GRTextField/GRTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GRTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		156ED2DF29E2CE68D521C72D4FA4B7BD /* Build configuration list for PBXNativeTarget "Pods-GRTextField_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35E2CBEE09A0D80B9953E48E309A2872 /* Debug */,
+				BCD0CC17DB2A1056018BE4B40570903B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6A03C9B1314C05BD3C2FBD3F65EDF83 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BDFA493603F6A7F3D4E20C6F030661C /* Build configuration list for PBXNativeTarget "Pods-GRTextField_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2AFB4B8A6D31A385BCA1DF4367FFCC5 /* Debug */,
+				74134EE4FC810D71EAA62902FD98C720 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B277F87F708DB9D41DFEA911FFDD2ABC /* Build configuration list for PBXNativeTarget "GRTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA61AA1C12AFE453D5CA828B0F10C968 /* Debug */,
+				E02FC94D0B78AA7434FA357514573F20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

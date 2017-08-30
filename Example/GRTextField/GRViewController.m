@@ -7,23 +7,38 @@
 //
 
 #import "GRViewController.h"
+#import <GRTextField/GRTextField.h>
 
-@interface GRViewController ()
-
+@interface GRViewController () <UITextFieldDelegate, UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet GRTextField *textField;
 @end
 
 @implementation GRViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -
+#pragma mark - Methods
+-(void)validate {
+    [self.textField setError:(self.textField.text.length < 1)];
+}
+
+#pragma mark -
+#pragma mark - UITextFieldDelegate
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    [self validate];
+}
+
+#pragma mark -
+#pragma mark - IBActions
+- (IBAction)validateAction:(id)sender {
+    [self validate];
+}
+
+- (IBAction)tapGestureOnViewAction:(id)sender {
+    [self.view endEditing:YES];
 }
 
 @end

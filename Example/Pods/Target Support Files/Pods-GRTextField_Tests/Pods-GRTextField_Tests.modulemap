@@ -1,0 +1,6 @@
+framework module Pods_GRTextField_Tests {
+  umbrella header "Pods-GRTextField_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

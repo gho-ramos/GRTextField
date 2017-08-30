@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GRTextField'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of GRTextField.'
+  s.summary          = 'Customizable TextField in ObjC'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Customizable TextField with a bunch of settings such as custom colors for error, selection, idle, mask patterns and localizable tags for errors
                        DESC
 
-  s.homepage         = 'https://github.com/guilherme.hor@gmail.com/GRTextField'
+  s.homepage         = 'https://github.com/gho-ramos/GRTextField'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'guilherme.hor@gmail.com' => 'guilherme.hor@gmail.com' }
-  s.source           = { :git => 'https://github.com/guilherme.hor@gmail.com/GRTextField.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/gho-ramos/GRTextField.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/pogramos'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'GRTextField/Classes/**/*'
+  s.source_files = 'GRTextField/Classes/**/*', 'GRTextField/Extensions/**/*'
   
   # s.resource_bundles = {
   #   'GRTextField' => ['GRTextField/Assets/*.png']

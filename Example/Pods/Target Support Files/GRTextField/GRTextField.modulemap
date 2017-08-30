@@ -1,0 +1,6 @@
+framework module GRTextField {
+  umbrella header "GRTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "GRTextField",
+  "version": "0.1.0",
+  "summary": "A short description of GRTextField.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/guilherme.hor@gmail.com/GRTextField",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "guilherme.hor@gmail.com": "guilherme.hor@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/guilherme.hor@gmail.com/GRTextField.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "GRTextField/Classes/**/*",
+    "GRTextField/Extensions/**/*"
+  ]
+}
