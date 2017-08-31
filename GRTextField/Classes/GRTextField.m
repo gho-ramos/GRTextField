@@ -10,7 +10,7 @@
 #import "NSString+GRTextField.h"
 
 @interface GRTextField()<UITextFieldDelegate>
-@property (nonatomic, strong) id<UITextFieldDelegate> extension;
+@property (nonatomic, weak) id<UITextFieldDelegate> extension;
 @property (nonatomic, strong) CALayer *border;
 @end
 
