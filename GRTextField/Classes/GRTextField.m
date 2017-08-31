@@ -163,12 +163,6 @@ NSString *const selectionRangeKey = @"selectionRange";
     if ([self.extension respondsToSelector:@selector(textFieldDidEndEditing:)]) {
         [self.extension textFieldDidEndEditing:textField];
     }
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason NS_AVAILABLE_IOS(10_0) {
-    if ([self.extension respondsToSelector:@selector(textFieldDidEndEditing:reason:)]) {
-        [self.extension textFieldDidEndEditing:textField reason:reason];
-    }
     [self setColorsOfField];
 }
 
