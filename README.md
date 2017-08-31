@@ -22,7 +22,7 @@ pod "GRTextField"
 
 ## Author
 
-guilherme.hor@gmail.com, guilherme.hor@gmail.com
+guilherme.hor@gmail.com
 
 ## License
 
