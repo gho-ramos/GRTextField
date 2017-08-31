@@ -24,7 +24,7 @@ A customizable TextField in OBJC with possibility of attaching own error labels 
   s.homepage         = 'https://github.com/gho-ramos/GRTextField'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Pogramos' => 'guilherme.hor@gmail.com' }
+  s.author           = { 'Pogramos' => 'pogramoss@gmail.com' }
   s.source           = { :git => 'https://github.com/gho-ramos/GRTextField.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/pogramos'
 
