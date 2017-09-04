@@ -9,6 +9,5 @@ language: objective-c
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/GRTextField.xcworkspace -scheme GRTextField-Example -sdk iphonesimulator10.0 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+script: ./build.sh
+xcode_sdk: iphonesimulator10.0
