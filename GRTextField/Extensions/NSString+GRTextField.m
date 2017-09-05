@@ -10,7 +10,16 @@
 
 @implementation NSString (GRTextField)
 -(NSString *)localized {
-    return NSLocalizedString(self, "");
+    NSString *key;
+    NSString *path = [[NSBundle mainBundle] pathForResource:[[NSLocale currentLocale] languageCode] ofType:@"lproj"];
+    if (path) {
+        NSBundle *bundle = [NSBundle bundleWithPath:path];
+        key = [bundle localizedStringForKey:self value:nil table:@"localizable"];
+        if (key) {
+            return key;
+        }
+    }
+    return self;
 }
 
 + (BOOL)isNullOrEmpty:(NSString *)string {

@@ -1,0 +1,10 @@
+/* 
+  localizable.strings
+  GRTextField
+
+  Created by Guilherme Ramos on 04/09/17.
+  Copyright © 2017 guilherme.hor@gmail.com. All rights reserved.
+*/
+
+
+"ERROR_KEY" = "Campo obrigatório";
