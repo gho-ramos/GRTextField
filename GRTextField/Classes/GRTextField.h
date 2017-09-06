@@ -61,6 +61,11 @@ IB_DESIGNABLE @interface GRTextField : UITextField
 @property (nonatomic, strong) IBOutlet UILabel* errorLabel;
 
 /**
+ Custom font for error label
+ */
+@property (nonatomic, strong) UIFont *errorFont;
+
+/**
  Text without mask
  */
 @property (nonatomic, strong) NSString *unmaskedText;

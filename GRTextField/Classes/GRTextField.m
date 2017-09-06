@@ -16,6 +16,7 @@
 
 @implementation GRTextField
 @synthesize border = _border;
+@synthesize errorFont = _errorFont;
 @synthesize borderColor = _borderColor;
 @synthesize errorBorderColor = _errorBorderColor;
 @synthesize selectedBorderColor = _selectedBorderColor;
@@ -127,6 +128,24 @@ NSString *const selectionRangeKey = @"selectionRange";
     }
 }
 
+-(UIFont *)errorFont {
+    if (_errorFont == nil) {
+        if (self.errorLabel != nil) {
+            _errorFont = self.errorLabel.font;
+        } else {
+            _errorFont = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
+        }
+    }
+    return _errorFont;
+}
+
+-(void)setErrorFont:(UIFont *)errorFont {
+    _errorFont = errorFont;
+    
+    if (self.errorLabel != nil) {
+        self.errorLabel.font = _errorFont;
+    }
+}
 
 -(NSString *)unmaskedText {
     if (self.maskPattern) {
@@ -228,11 +247,6 @@ NSString *const selectionRangeKey = @"selectionRange";
     });
 }
 
-
-- (void)bottomBorder {
-    [self.layer addSublayer:self.border];
-}
-
 - (void)resizeErrorLabelToFit {
     if (self.errorLabel) {
         CGRect bounds = [self.errorLabel textRectForBounds:self.frame limitedToNumberOfLines:0];
@@ -259,12 +273,9 @@ NSString *const selectionRangeKey = @"selectionRange";
     [self resizeErrorLabelToFit];
 }
 
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     if (_hasBorder) {
-        [self bottomBorder];
+        [self.layer addSublayer:self.border];
     }
 }
 
