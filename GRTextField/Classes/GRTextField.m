@@ -16,7 +16,7 @@
 @end
 
 @implementation GRTextField
-@synthesize key;
+@synthesize key = _key;
 @synthesize border = _border;
 @synthesize errorFont = _errorFont;
 @synthesize borderColor = _borderColor;

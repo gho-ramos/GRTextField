@@ -1,5 +1,5 @@
 PODS:
-  - GRTextField (1.0.1)
+  - GRTextField (1.0.3)
 
 DEPENDENCIES:
   - GRTextField (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GRTextField: c58c975f6fef8e8e6ff7c02e811c56eb3019ce2c
+  GRTextField: b69c503a15e1e2da7672a7f3b977d338f63fafbe
 
 PODFILE CHECKSUM: d4bb0a36dde847350bc761cb22c66248bfdbd825
 
