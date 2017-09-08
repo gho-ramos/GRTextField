@@ -19,6 +19,7 @@
 		B77086BF8AB2F100B4655F802398D7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		BF07F3E9D55360382F94346AE03D217C /* NSString+GRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3EC280A449970FC31F72EA7329FECB /* NSString+GRTextField.m */; };
 		C7B7E020B00C2FE0D0EF87238891A872 /* Pods-GRTextField_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B056FEF9DD0001C6868FA986CEB3A2A0 /* Pods-GRTextField_Tests-dummy.m */; };
+		E66FD2191F62DEA700A1CA82 /* ErrorTextFieldProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E66FD2181F62DEA700A1CA82 /* ErrorTextFieldProtocol.h */; };
 		EB673D2DA5B69A2FE3ED7CD0EC058982 /* GRTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88A56C3A317ED9D63748E5A4148F4871 /* GRTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -33,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0152979B2E393C216D9086CD9154E1BF /* GRTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GRTextField.modulemap; sourceTree = "<group>"; };
+		0152979B2E393C216D9086CD9154E1BF /* GRTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GRTextField.modulemap; sourceTree = "<group>"; };
 		11F14C72D25F30F90E2573E7B4388251 /* Pods-GRTextField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GRTextField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		16EB2433FB82902BACDE97223A60BAC7 /* Pods-GRTextField_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Tests-resources.sh"; sourceTree = "<group>"; };
 		271F6E9284C20B707209C1D30A7DE6A9 /* Pods-GRTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GRTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,28 +46,29 @@
 		610CB74C2F8AB5D05C39F20A2938E1A9 /* GRTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GRTextField.xcconfig; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6713267BC740D59F0A8D98FD59AEE6F3 /* GRTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GRTextField.h; sourceTree = "<group>"; };
-		69268012272FE54FF3538ADC8948BC6F /* Pods_GRTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GRTextField_Tests.framework; path = "Pods-GRTextField_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69268012272FE54FF3538ADC8948BC6F /* Pods_GRTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		729A57FECCCD20C41B1A4BE5BB419D27 /* GRTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GRTextField-prefix.pch"; sourceTree = "<group>"; };
 		784AF6BB8F46049E27BE5E33CD432288 /* Pods-GRTextField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GRTextField_Example-umbrella.h"; sourceTree = "<group>"; };
 		88A56C3A317ED9D63748E5A4148F4871 /* GRTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GRTextField-umbrella.h"; sourceTree = "<group>"; };
 		8C05C655D235E77EE662E1B7A73DABCA /* Pods-GRTextField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GRTextField_Example-dummy.m"; sourceTree = "<group>"; };
 		902577C8AFA2AA3E8A9DF6E232572118 /* Pods-GRTextField_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9639B41995EA5F75C5FDB00F581A8BAB /* Pods-GRTextField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GRTextField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B056FEF9DD0001C6868FA986CEB3A2A0 /* Pods-GRTextField_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GRTextField_Tests-dummy.m"; sourceTree = "<group>"; };
 		B833B80451025FA1DC73A4952379F0E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A2E8441AF23A1B58F0034E8635764B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB4D5F7E43297401061CA7F0C85818FE /* GRTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GRTextField-dummy.m"; sourceTree = "<group>"; };
-		CDA1CCA67CFC41F65A6FD0CD36D92B0C /* Pods-GRTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GRTextField_Example.modulemap"; sourceTree = "<group>"; };
-		CFAEF6D2913AAC3D95EC575B86BCDEA2 /* Pods-GRTextField_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GRTextField_Tests.modulemap"; sourceTree = "<group>"; };
+		CDA1CCA67CFC41F65A6FD0CD36D92B0C /* Pods-GRTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GRTextField_Example.modulemap"; sourceTree = "<group>"; };
+		CFAEF6D2913AAC3D95EC575B86BCDEA2 /* Pods-GRTextField_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GRTextField_Tests.modulemap"; sourceTree = "<group>"; };
 		DD56A84A8050CE59EAB0908401E10718 /* Pods-GRTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GRTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DE05294B352C814196DA4B2C12AB06F3 /* NSString+GRTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+GRTextField.h"; sourceTree = "<group>"; };
 		E5C1BA873CC7C559699EF6AD8C917D32 /* Pods-GRTextField_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Example-resources.sh"; sourceTree = "<group>"; };
+		E66FD2181F62DEA700A1CA82 /* ErrorTextFieldProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorTextFieldProtocol.h; sourceTree = "<group>"; };
 		ED701134581E6B4F9BB0B199DFC7142F /* Pods-GRTextField_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GRTextField_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F08A41217C85DF2078DF65364FF757A2 /* Pods-GRTextField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GRTextField_Example-frameworks.sh"; sourceTree = "<group>"; };
-		F1538180F4DF55BA602780AD062407E3 /* Pods_GRTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GRTextField_Example.framework; path = "Pods-GRTextField_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1538180F4DF55BA602780AD062407E3 /* Pods_GRTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F34A8A1AA45D95B1147A132B69D6739B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAB5E93A44855EB01546BE6A102F4BFF /* GRTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GRTextField.framework; path = GRTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB5E93A44855EB01546BE6A102F4BFF /* GRTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3EC280A449970FC31F72EA7329FECB /* NSString+GRTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+GRTextField.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 		9D562B906845078909AB26915A59E35C /* GRTextField */ = {
 			isa = PBXGroup;
 			children = (
+				E66FD2171F62DE4700A1CA82 /* Protocols */,
 				49BF3D2F665CA24A8153D0153032327B /* Classes */,
 				445B157FEF385290A03C9F55C56A71F0 /* Extensions */,
 				26E9E5E9A5185838FA4A08ADEEB51A95 /* Support Files */,
@@ -185,6 +188,15 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E66FD2171F62DE4700A1CA82 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E66FD2181F62DEA700A1CA82 /* ErrorTextFieldProtocol.h */,
+			);
+			name = Protocols;
+			path = GRTextField/Protocols;
 			sourceTree = "<group>";
 		};
 		E7DD5100FD0BB4C1D83B431B2CAB4CAA /* Products */ = {
@@ -251,6 +263,7 @@
 				EB673D2DA5B69A2FE3ED7CD0EC058982 /* GRTextField-umbrella.h in Headers */,
 				6563616D623F767CD4C5890E2D31D37A /* GRTextField.h in Headers */,
 				2AAAA754CE4767BE173C69A7BE2C055D /* NSString+GRTextField.h in Headers */,
+				E66FD2191F62DEA700A1CA82 /* ErrorTextFieldProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

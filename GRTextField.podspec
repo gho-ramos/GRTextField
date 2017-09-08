@@ -30,7 +30,7 @@ A customizable TextField in OBJC with possibility of attaching own error labels 
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'GRTextField/Classes/**/*', 'GRTextField/Extensions/**/*'
+  s.source_files = 'GRTextField/Classes/**/*', 'GRTextField/Extensions/**/*', 'GRTextField/Protocols/**/*'
 
   # s.resource_bundles = {
   #   'GRTextField' => ['GRTextField/Assets/**/*.png']
