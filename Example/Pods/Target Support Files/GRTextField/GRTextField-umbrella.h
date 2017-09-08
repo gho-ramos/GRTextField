@@ -12,6 +12,7 @@
 
 #import "GRTextField.h"
 #import "NSString+GRTextField.h"
+#import "ErrorTextFieldProtocol.h"
 
 FOUNDATION_EXPORT double GRTextFieldVersionNumber;
 FOUNDATION_EXPORT const unsigned char GRTextFieldVersionString[];
