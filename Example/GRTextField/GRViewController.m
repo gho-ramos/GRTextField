@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.textField.text = @"Text";
-    
+    self.textField.errorFont = [UIFont systemFontOfSize:10];
 }
 
 #pragma mark -
