@@ -30,6 +30,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="errorMessageKey" value="ERROR_KEY"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="maskPattern" value="(##) #####-####"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="whP-gf-Uak" id="i1O-cQ-eGz"/>
