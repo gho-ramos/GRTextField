@@ -49,10 +49,19 @@
 }
 
 -(NSString*)unmaskedString {
-    NSString *pattern = @"\\D+";
-    NSError *error = nil;
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
-    return [regex stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, self.length) withTemplate:@""];
+    NSString *pattern = @"\\D+";
+    NSMutableString *unmaskedString = [NSMutableString new];
+    
+    for (int i = 0; i < self.length; i++) {
+        NSCharacterSet *decimalSet = [NSCharacterSet decimalDigitCharacterSet];
+        unichar c = [self characterAtIndex:i];
+        if ([decimalSet characterIsMember:c]) {
+            [unmaskedString appendString:[NSString stringWithFormat:@"%c", c]];
+        }
+    }
+    
+    return unmaskedString;
+    
 }
 @end

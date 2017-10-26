@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ErrorTextFIeldProtocol.h"
 
-IB_DESIGNABLE @interface GRTextField : UITextField
+IB_DESIGNABLE @interface GRTextField : UITextField <ErrorTextFieldProtocol>
 
 /**
  Define the pattern that the textField will mask, if there is no pattern
