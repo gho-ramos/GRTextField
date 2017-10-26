@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ErrorTextFIeldProtocol.h"
+#import "ErrorTextFieldProtocol.h"
 
 IB_DESIGNABLE @interface GRTextField : UITextField <ErrorTextFieldProtocol>
 
