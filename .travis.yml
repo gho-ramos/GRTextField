@@ -11,3 +11,8 @@ language: objective-c
 # - pod install --project-directory=Example
 script: ./build.sh
 xcode_sdk: iphonesimulator10.3
+
+# safelist
+branches:
+  only:
+  - master
