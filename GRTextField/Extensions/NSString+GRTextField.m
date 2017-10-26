@@ -11,7 +11,16 @@
 @implementation NSString (GRTextField)
 -(NSString *)localized {
     NSString *key;
-    NSString *path = [[NSBundle mainBundle] pathForResource:[[NSLocale currentLocale] languageCode] ofType:@"lproj"];
+    NSString *languageCode;
+    
+    if (@available(iOS 10.0, *)) {
+        languageCode = [[NSLocale currentLocale] languageCode];
+    } else {
+        // Fallback on earlier versions
+        languageCode = [[NSLocale preferredLanguages] firstObject];
+    }
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:languageCode ofType:@"lproj"];
     if (path) {
         NSBundle *bundle = [NSBundle bundleWithPath:path];
         key = [bundle localizedStringForKey:self value:nil table:@"localizable"];
