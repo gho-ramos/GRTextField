@@ -12,8 +12,7 @@
 -(NSString *)localized {
     NSString *key;
     NSString *languageCode;
-    
-    if (@available(iOS 10.0, *)) {
+    if (@available(iOS 10, *)) {
         languageCode = [[NSLocale currentLocale] languageCode];
     } else {
         // Fallback on earlier versions
