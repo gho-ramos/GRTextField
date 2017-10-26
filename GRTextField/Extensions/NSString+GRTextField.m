@@ -59,7 +59,6 @@
 
 -(NSString*)unmaskedString {
     
-    NSString *pattern = @"\\D+";
     NSMutableString *unmaskedString = [NSMutableString new];
     
     for (int i = 0; i < self.length; i++) {
