@@ -8,9 +8,8 @@
 
 #import "GRTextField.h"
 #import "NSString+GRTextField.h"
-#import "ErrorTextFIeldProtocol.h"
 
-@interface GRTextField()<UITextFieldDelegate, ErrorTextFieldProtocol>
+@interface GRTextField()<UITextFieldDelegate>
 @property (nonatomic, weak) id<UITextFieldDelegate> extension;
 @property (nonatomic, strong) CALayer *border;
 @end
