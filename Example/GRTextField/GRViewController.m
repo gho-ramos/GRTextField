@@ -11,6 +11,7 @@
 
 @interface GRViewController () <UITextFieldDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet GRTextField *textField;
+@property (weak, nonatomic) IBOutlet UILabel * unmaskedLabel;
 @end
 
 @implementation GRViewController
@@ -25,6 +26,8 @@
 #pragma mark - Methods
 -(void)validate {
     [self.textField setError:(self.textField.text.length < 1)];
+    
+    self.unmaskedLabel.text = [self.textField unmaskedText];
 }
 
 #pragma mark -
