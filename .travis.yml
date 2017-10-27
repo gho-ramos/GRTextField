@@ -1,18 +1,10 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
 osx_image: xcode9.1
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-script: ./build.sh
+script: "./build.sh"
 xcode_sdk: iphonesimulator11.0
-
-# safelist
 branches:
   only:
   - master
+notifications:
+  slack:
+    secure: mIOxY9t1WpxnINrQs6U2ji/T4TLDjNZoS0/TFs7RlL1xjUlMgtroc/QebaF9RwgjxYJDFyTR9UKFdGuAQPzbx4XEl126T5A4wxj6D1e994e9sZEx8rS6Yg+/xaWzDLL+EtsYTp6tkKPC/OxAFn9YgEIZO9CHqLpEwqqBOjBQ6KIyX6/4luvCoS/3xDHVw0Tc+dwubZAPnfS/Qor92xTSRnCt2ViKHl9vVSXyHeQ2D1QMKyN7WFUt3zCG6GO0Sk5ScrG7vpf4iHhGyI25wKOdY4FvDaHzmCd0STqP0wHvP3NKt4L1qFrBKiVgxKopXjr71qjh/7w6PcSCcYwJgzhoeSYxFVikUvwREGtmeoQFn/d71qV6xxybRfL+crNXVvm9aocNkhGS3YWmH8UaBbp5xoHjNx4sb/C+x7cC985WZU6ObAV6Vz6FRSa7cnBzQyUW4D/8rAyQmnns4LVOvSq2Tqk/pUsbpW6qlU0UrCKrAa2DW4j/P5bO6iIWeptg3stWwPB2C42oBhBtTy1kSEFgVlRZ0iM1ZZToiY8HMU3aB4bUwD5IaA0IrcY0f1JbP8S3pshO8DTSnsC6HZkh5XGCQ5Y2UntfN50XBhMutWr5qqeyhUEjRJyfn/Xcym+JLilz+7sUnDT7Mp9L/jS9qPm8EsvYNY9qp24rDtC5PQsc1g0=
