@@ -1,16 +1,19 @@
 PODS:
-  - GRTextField (1.0.1)
+  - GRTextField (1.0.2)
+  - Nimble (7.0.2)
 
 DEPENDENCIES:
   - GRTextField (from `../`)
+  - Nimble (~> 7.0)
 
 EXTERNAL SOURCES:
   GRTextField:
     :path: ../
 
 SPEC CHECKSUMS:
-  GRTextField: bc4bc0ffd74e64a9f5ebf89bb68de08aa9d78d95
+  GRTextField: 812aecc764aeee5e7363953bf414e6173d62144f
+  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
 
-PODFILE CHECKSUM: d4bb0a36dde847350bc761cb22c66248bfdbd825
+PODFILE CHECKSUM: 2a51fe902d5b687c6a0fe0f4b2c0101b72ef55d6
 
 COCOAPODS: 1.3.1

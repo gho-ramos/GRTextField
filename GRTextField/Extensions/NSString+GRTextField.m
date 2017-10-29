@@ -56,7 +56,7 @@
     return masked;
 }
 
--(NSString*)unmaskedString {
+-(NSString*)grUnmaskedString {
     
     NSMutableString *unmaskedString = [NSMutableString new];
     

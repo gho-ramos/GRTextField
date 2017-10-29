@@ -150,7 +150,7 @@ NSString *const selectionRangeKey = @"selectionRange";
 
 -(NSString *)unmaskedText {
     if (self.maskPattern) {
-        return [self.text unmaskedString];
+        return [self.text grUnmaskedString];
     }
     return self.text;
 }

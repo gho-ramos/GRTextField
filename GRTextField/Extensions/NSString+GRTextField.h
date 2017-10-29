@@ -12,5 +12,5 @@
 -(NSString *) localized;
 +(BOOL)isNullOrEmpty:(NSString*)string;
 -(NSString*)maskWithPattern:(NSString*)pattern;
--(NSString*)unmaskedString;
+-(NSString*)grUnmaskedString;
 @end
