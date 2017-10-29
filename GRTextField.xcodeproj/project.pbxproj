@@ -16,7 +16,6 @@
 		E6AB91961F27C5A2004A93F9 /* GRTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB91951F27C5A2004A93F9 /* GRTextFieldTests.m */; };
 		E6AB91A11F27C5A2004A93F9 /* GRTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB91A01F27C5A2004A93F9 /* GRTextFieldUITests.m */; };
 		E6AB91B11F27C5D3004A93F9 /* GRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB91B01F27C5D3004A93F9 /* GRTextField.m */; };
-		E6AB91B51F27C625004A93F9 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AB91B41F27C625004A93F9 /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,6 @@
 		E6AB91A21F27C5A2004A93F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6AB91AF1F27C5D3004A93F9 /* GRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTextField.h; sourceTree = "<group>"; };
 		E6AB91B01F27C5D3004A93F9 /* GRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTextField.m; sourceTree = "<group>"; };
-		E6AB91B31F27C625004A93F9 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
-		E6AB91B41F27C625004A93F9 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +104,6 @@
 		E6AB917A1F27C5A2004A93F9 /* GRTextField */ = {
 			isa = PBXGroup;
 			children = (
-				E6AB91B21F27C613004A93F9 /* Extension */,
 				E6AB91AE1F27C5AD004A93F9 /* CustomTextField */,
 				E6AB917E1F27C5A2004A93F9 /* AppDelegate.h */,
 				E6AB917F1F27C5A2004A93F9 /* AppDelegate.m */,
@@ -155,15 +151,6 @@
 				E6AB91B01F27C5D3004A93F9 /* GRTextField.m */,
 			);
 			name = CustomTextField;
-			sourceTree = "<group>";
-		};
-		E6AB91B21F27C613004A93F9 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				E6AB91B31F27C625004A93F9 /* NSString+Extension.h */,
-				E6AB91B41F27C625004A93F9 /* NSString+Extension.m */,
-			);
-			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +289,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6AB91B51F27C625004A93F9 /* NSString+Extension.m in Sources */,
 				E6AB91831F27C5A2004A93F9 /* ViewController.m in Sources */,
 				E6AB91801F27C5A2004A93F9 /* AppDelegate.m in Sources */,
 				E6AB91B11F27C5D3004A93F9 /* GRTextField.m in Sources */,
@@ -546,6 +532,7 @@
 				E6AB91A71F27C5A2004A93F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6AB91A81F27C5A2004A93F9 /* Build configuration list for PBXNativeTarget "GRTextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +541,7 @@
 				E6AB91AA1F27C5A2004A93F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6AB91AB1F27C5A2004A93F9 /* Build configuration list for PBXNativeTarget "GRTextFieldUITests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +550,7 @@
 				E6AB91AD1F27C5A2004A93F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

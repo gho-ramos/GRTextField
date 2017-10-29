@@ -40,7 +40,7 @@
 -(NSString *)maskWithPattern:(NSString *)pattern {
     NSInteger index = 0;
     NSString *masked = @"";
-    NSString *string = [self unmaskedString];
+    NSString *string = [self grUnmaskedString];
     for (int i = 0; i < pattern.length; i++) {
         if (index >= string.length) {
             break;

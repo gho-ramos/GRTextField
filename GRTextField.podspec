@@ -32,11 +32,8 @@ A customizable TextField in OBJC with possibility of attaching own error labels 
 
   s.source_files = 'GRTextField/Classes/**/*', 'GRTextField/Extensions/**/*', 'GRTextField/Protocols/**/*'
 
-  # s.resource_bundles = {
-  #   'GRTextField' => ['GRTextField/Assets/**/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'Tests/*.{h,m}'
+    test_spec.dependency 'Nimble' # This dependency will only be linked with your tests.
+  end
 end
