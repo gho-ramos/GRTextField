@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
+               BlueprintIdentifier = "E657B01A1FA63B0700960069"
                BuildableName = "GRTextField_Tests.xctest"
                BlueprintName = "GRTextField_Tests"
                ReferencedContainer = "container:GRTextField.xcodeproj">
