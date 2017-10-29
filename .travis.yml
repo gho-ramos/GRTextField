@@ -7,9 +7,11 @@ branches:
   - master
 notifications:
   slack:
-    secure: mIOxY9t1WpxnINrQs6U2ji/T4TLDjNZoS0/TFs7RlL1xjUlMgtroc/QebaF9RwgjxYJDFyTR9UKFdGuAQPzbx4XEl126T5A4wxj6D1e994e9sZEx8rS6Yg+/xaWzDLL+EtsYTp6tkKPC/OxAFn9YgEIZO9CHqLpEwqqBOjBQ6KIyX6/4luvCoS/3xDHVw0Tc+dwubZAPnfS/Qor92xTSRnCt2ViKHl9vVSXyHeQ2D1QMKyN7WFUt3zCG6GO0Sk5ScrG7vpf4iHhGyI25wKOdY4FvDaHzmCd0STqP0wHvP3NKt4L1qFrBKiVgxKopXjr71qjh/7w6PcSCcYwJgzhoeSYxFVikUvwREGtmeoQFn/d71qV6xxybRfL+crNXVvm9aocNkhGS3YWmH8UaBbp5xoHjNx4sb/C+x7cC985WZU6ObAV6Vz6FRSa7cnBzQyUW4D/8rAyQmnns4LVOvSq2Tqk/pUsbpW6qlU0UrCKrAa2DW4j/P5bO6iIWeptg3stWwPB2C42oBhBtTy1kSEFgVlRZ0iM1ZZToiY8HMU3aB4bUwD5IaA0IrcY0f1JbP8S3pshO8DTSnsC6HZkh5XGCQ5Y2UntfN50XBhMutWr5qqeyhUEjRJyfn/Xcym+JLilz+7sUnDT7Mp9L/jS9qPm8EsvYNY9qp24rDtC5PQsc1g0=
+    rooms:
+      - secure: "ez3HBlOFXy6luAT0DYrTIwufAK03IYOLTpQag0qlk5awNoQsH+3SEoo1A6stiAtbeXhgZANKlUkAks4+WnPRoMCY0HGbKzW3Fa9jK7ZdkL42Secj2ufU8z3EN1PgQRdr3OdYplFE6fkbWDn/bORNbTJCYCvANwTSAeWpO/9ECE6w0ocaie+5qxD1FEUni3K3NS9ERElddUpyYEB5JQNeCChlDi62d1izZASGuUi1rmYo9ri6I7bgjTUZz6voM1b4znMVAeAmgME0pDoF3NClQhzbAPfXUWRuJ2MuqSK0MGD6rh64T+fmhX64RJMlGqs5zr1vPfvKf2eoJJySUXoSBsxUIUQbcCCAM7tlcMdwoxFi3D9FibU4yeLWuEi7C2xtI+kLFwgul0AA0y5lPxoi0oXM+fqGvYUks8nlRVUQMTb1h76843TMk3rivu198rUPJXIRYuASJgVtBup/0gJqC1ymlDh9qXPNp8nfYKdRHM5m5IBLyeVmxPE2BfnyblTs8wrTs4kAx3MS3MborSzi5yIWm8x6BX6aO2tFnoB2qLXFY9ODxajyrUz1QGNMtXNc0ainYSWaHiQa9T3rhIPeRR2VP5Efq3yUFI9Bl85127ox/u0obboxRDRgYLq+PMJ7xw6YZu23m3w9cNHJmP4D3xkgzXd/eodlRCyd6HYsb34="
+    on_success: always
     template:
       - "%{repository}"
-      - "Commit nº: %{commit}"
-      - "Message: %{message}"
-      - "Build details: %{build_url}"
+      - 'Commit nº: %{commit}'
+      - 'Message: %{message}'
+      - 'Build details: %{build_url}'
