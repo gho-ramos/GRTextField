@@ -31,9 +31,4 @@ A customizable TextField in OBJC with possibility of attaching own error labels 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'GRTextField/Classes/**/*', 'GRTextField/Extensions/**/*', 'GRTextField/Protocols/**/*'
-
-  s.test_spec 'Tests' do |test_spec|
-    test_spec.source_files = 'Tests/*.{h,m}'
-    test_spec.dependency 'Nimble' # This dependency will only be linked with your tests.
-  end
 end
