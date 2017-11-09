@@ -80,7 +80,7 @@ pod "GRTextField"
 
 ## Author
 
-pogramoss@gmailcom
+pogramoss@gmail.com
 
 ## License
 
