@@ -23,17 +23,5 @@
     "GRTextField/Classes/**/*",
     "GRTextField/Extensions/**/*",
     "GRTextField/Protocols/**/*"
-  ],
-  "testspecs": [
-    {
-      "name": "Tests",
-      "test_type": "unit",
-      "source_files": "Tests/*.{h,m}",
-      "dependencies": {
-        "Nimble": [
-
-        ]
-      }
-    }
   ]
 }
