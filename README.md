@@ -59,7 +59,7 @@ There's no secret mystery behind this one.
 ```ObjectiveC
 GRTextField * textField = [[GRTextField alloc] init];
 ```
-or 
+or
 ```ObjectiveC
 GRTextField * textField = [GRTextField new];
 ```
@@ -80,7 +80,7 @@ pod "GRTextField"
 
 ## Author
 
-pogramoss@gmail.com
+guilherme.hor@gmail.com
 
 ## License
 

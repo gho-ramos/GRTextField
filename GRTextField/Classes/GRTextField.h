@@ -19,6 +19,14 @@ IB_DESIGNABLE @interface GRTextField : UITextField <ErrorTextFieldProtocol>
  */
 @property (nonatomic, strong) IBInspectable NSString* maskPattern;
 
+
+/**
+ Define the hint text that will be shown in place of the error while the field is valid
+
+ P.S.: if this property is not set, it will hide the error label
+ */
+@property (nonatomic, strong) IBInspectable NSString* hintText;
+
 /**
  Error message or Key to display on our error label field
  if there is a key onto localizableStrings file it will automatically localize the message
