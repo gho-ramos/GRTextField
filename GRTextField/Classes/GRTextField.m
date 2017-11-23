@@ -36,13 +36,16 @@ NSString *const selectionRangeKey = @"selectionRange";
     }
     
     if (self.errorLabel) {
-        self.errorLabel.text = @"";
-        
-        [self.errorLabel setHidden:YES];
-        self.errorLabel.textColor = self.errorBorderColor;
-        
+        BOOL isEmpty = [NSString isNullOrEmpty:self.hintText];
+
+        self.errorLabel.text = self.hintText;
         self.errorLabel.numberOfLines = 0;
         self.errorLabel.lineBreakMode = NSLineBreakByWordWrapping;
+
+        [self.errorLabel setHidden:isEmpty];
+        if (isEmpty) {
+            self.errorLabel.textColor = self.errorBorderColor;
+        }
     }
 }
 
@@ -56,8 +59,10 @@ NSString *const selectionRangeKey = @"selectionRange";
     _isValid = isValid;
     
     [self setColorsOfField];
-    
-    [self.errorLabel setHidden:_isValid];
+
+    BOOL isValidAndEmpty = _isValid && [NSString isNullOrEmpty:self.hintText];
+
+    [self.errorLabel setHidden:isValidAndEmpty];
 }
 
 -(void)setMaskPattern:(NSString *)maskPattern {
@@ -227,20 +232,21 @@ NSString *const selectionRangeKey = @"selectionRange";
 #pragma mark -
 #pragma mark - GRTextField Methods
 -(void)setColorsOfField {
-    CGColorRef color;
+    UIColor * color;
     CGFloat height;
     if (self.isValid) {
         if (self.isFirstResponder) {
-            color = self.selectedBorderColor.CGColor;
+            color = self.selectedBorderColor;
         } else {
-            color = self.borderColor.CGColor;
+            color = self.borderColor;
         }
         height = 1;
     } else {
-        color = self.errorBorderColor.CGColor;
+        color = self.errorBorderColor;
         height = 2;
     }
-    self.border.backgroundColor = color;
+    self.errorLabel.textColor = color;
+    self.border.backgroundColor = color.CGColor;
     self.border.frame = ({
         CGRect frame = self.border.frame;
         frame.size.height = height;
@@ -269,7 +275,7 @@ NSString *const selectionRangeKey = @"selectionRange";
     if (!self.isValid) {
         self.errorLabel.text = message;
     } else {
-        self.errorLabel.text = @"";
+        self.errorLabel.text = self.hintText;
     }
     [self resizeErrorLabelToFit];
 }
