@@ -256,7 +256,12 @@ NSString *const selectionRangeKey = @"selectionRange";
 
 - (void)resizeErrorLabelToFit {
     if (self.errorLabel) {
-        CGRect bounds = [self.errorLabel textRectForBounds:self.frame limitedToNumberOfLines:0];
+        CGRect frame = ({
+            CGRect frame = self.frame;
+            frame.size.height = CGFLOAT_MAX;
+            frame;
+        });
+        CGRect bounds = [self.errorLabel textRectForBounds:frame limitedToNumberOfLines:0];
         bounds.origin = self.errorLabel.frame.origin;
         self.errorLabel.frame = bounds;
     }
