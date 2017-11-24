@@ -50,8 +50,6 @@ e.g.: using (##) #####-#### (BR cellphone mask) as a mask will output the text a
 **_Selected_**: Defines the color for the bottom line when the field is selected and there's no errors;
 
 
-\*\* *There's a property on the field class called '**isValid**', everytime you call the method 'setError:' passing **YES** it will set the property as **NO** the error label will appear and the bottom line will change to **redColor** (as default) or whatever the custom color you set as the error color*
-
 ## Code Usage
 
 There's no secret mystery behind this one.
