@@ -49,6 +49,10 @@ NSString *const selectionRangeKey = @"selectionRange";
     }
 }
 
+-(void)layoutSubviews {
+    [self.layer addSublayer:self.border];
+}
+
 #pragma mark -
 #pragma mark - Getters and Setters
 -(void)setDelegate:(id<UITextFieldDelegate>)delegate {
@@ -79,14 +83,14 @@ NSString *const selectionRangeKey = @"selectionRange";
 -(CALayer *)border {
     if (!_border) {
         _border = [CALayer new];
-        _border.backgroundColor = self.borderColor.CGColor;
-        _border.frame = ({
-            CGRect frame = _border.frame;
-            frame.origin = CGPointMake(self.bounds.origin.x, CGRectGetMaxY(self.bounds) - 1);
-            frame.size = CGSizeMake(self.bounds.size.width, CGRectGetMaxY(self.bounds) - 1);
-            frame;
-        });
     }
+    _border.backgroundColor = self.borderColor.CGColor;
+    _border.frame = ({
+        CGRect frame = _border.frame;
+        frame.origin = CGPointMake(self.bounds.origin.x, CGRectGetMaxY(self.bounds) - 1);
+        frame.size = CGSizeMake(self.bounds.size.width, CGRectGetMaxY(self.bounds) - 1);
+        frame;
+    });
     return _border;
 }
 
@@ -285,11 +289,11 @@ NSString *const selectionRangeKey = @"selectionRange";
     [self resizeErrorLabelToFit];
 }
 
-- (void)drawRect:(CGRect)rect {
-    if (_hasBorder) {
-        [self.layer addSublayer:self.border];
-    }
-}
+//- (void)drawRect:(CGRect)rect {
+////    if (_hasBorder) {
+////        [self.layer addSublayer:self.border];
+////    }
+//}
 
 
 @end
