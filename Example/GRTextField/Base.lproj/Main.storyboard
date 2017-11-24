@@ -40,9 +40,8 @@
                                     <outlet property="errorLabel" destination="yTD-kO-oUH" id="cOz-xT-Cng"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Css-7M-XYP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Css-7M-XYP">
                                 <rect key="frame" x="137" y="337" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="validateAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="rh3-jL-P2J"/>
@@ -54,9 +53,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BV-uc-Dpn">
-                                <rect key="frame" x="139" y="406" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BV-uc-Dpn">
+                                <rect key="frame" x="16" y="391" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,9 +65,14 @@
                         <constraints>
                             <constraint firstItem="yTD-kO-oUH" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="7UP-rO-h9e"/>
                             <constraint firstItem="yTD-kO-oUH" firstAttribute="top" secondItem="MqP-X8-SMS" secondAttribute="bottom" constant="8" id="9S0-j5-Lt6"/>
+                            <constraint firstItem="Css-7M-XYP" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="AIy-7R-i6I"/>
                             <constraint firstItem="MqP-X8-SMS" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Gfg-0E-DSH"/>
                             <constraint firstItem="yTD-kO-oUH" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Gzq-GP-NpW"/>
+                            <constraint firstItem="9BV-uc-Dpn" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="IWT-bY-h47"/>
+                            <constraint firstItem="9BV-uc-Dpn" firstAttribute="top" secondItem="Css-7M-XYP" secondAttribute="bottom" constant="24" id="bvI-KM-5RL"/>
                             <constraint firstItem="MqP-X8-SMS" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="jHF-01-Vl7"/>
+                            <constraint firstItem="Css-7M-XYP" firstAttribute="top" secondItem="yTD-kO-oUH" secondAttribute="bottom" constant="4" id="pNC-No-92P"/>
+                            <constraint firstItem="9BV-uc-Dpn" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="rVi-F4-AWj"/>
                             <constraint firstItem="MqP-X8-SMS" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="sSM-lc-g3v"/>
                         </constraints>
                         <connections>
