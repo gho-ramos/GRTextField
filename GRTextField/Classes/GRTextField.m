@@ -26,15 +26,39 @@ NSString *const selectionRangeKey = @"selectionRange";
 -(void)awakeFromNib {
     [super awakeFromNib];
     [super setDelegate:self];
+    [self initialization];
+    [self layoutSubviews];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initialization];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initialization];
+    }
+    return self;
+}
+
+-(void)initialization {
     self.isValid = YES;
+    [self addBottomLine];
     if (self.hasBorder) {
         self.borderStyle = UITextBorderStyleNone;
     }
-    
+
     if (self.maskPattern) {
         self.keyboardType = UIKeyboardTypeNumberPad;
     }
-    
+
     if (self.errorLabel) {
         BOOL isEmpty = [NSString isNullOrEmpty:self.hintText];
 
@@ -49,6 +73,32 @@ NSString *const selectionRangeKey = @"selectionRange";
     }
 }
 
+- (void)addBottomLine {
+    if (self.border.superlayer != nil) {
+        self.border.frame = ({
+            CGRect frame = self.border.frame;
+            frame.size = CGSizeMake(self.frame.size.width, CGRectGetMaxY(self.frame) - 1);
+            frame;
+        });
+        return;
+    }
+    self.border = [CALayer new];
+    self.border.backgroundColor = self.borderColor.CGColor;
+    self.border.frame = ({
+        CGRect frame = self.border.frame;
+        frame.origin = CGPointMake(self.bounds.origin.x, CGRectGetMaxY(self.bounds) - 1);
+        frame.size = CGSizeMake(self.bounds.size.width, CGRectGetMaxY(self.bounds) - 1);
+        frame;
+    });
+
+    [self.layer addSublayer:self.border];
+}
+
+-(void) updateTextField:(CGRect)frame {
+    self.frame = frame;
+    [self initialization];
+}
+
 #pragma mark -
 #pragma mark - Getters and Setters
 -(void)setDelegate:(id<UITextFieldDelegate>)delegate {
@@ -57,7 +107,7 @@ NSString *const selectionRangeKey = @"selectionRange";
 
 -(void)setIsValid:(BOOL)isValid {
     _isValid = isValid;
-    
+
     [self setColorsOfField];
 
     BOOL isValidAndEmpty = _isValid && [NSString isNullOrEmpty:self.hintText];
@@ -79,13 +129,7 @@ NSString *const selectionRangeKey = @"selectionRange";
 -(CALayer *)border {
     if (!_border) {
         _border = [CALayer new];
-        _border.backgroundColor = self.borderColor.CGColor;
-        _border.frame = ({
-            CGRect frame = _border.frame;
-            frame.origin = CGPointMake(self.bounds.origin.x, CGRectGetMaxY(self.bounds) - 1);
-            frame.size = CGSizeMake(self.bounds.size.width, CGRectGetMaxY(self.bounds) - 1);
-            frame;
-        });
+        _border.masksToBounds = YES;
     }
     return _border;
 }
@@ -147,7 +191,7 @@ NSString *const selectionRangeKey = @"selectionRange";
 
 -(void)setErrorFont:(UIFont *)errorFont {
     _errorFont = errorFont;
-    
+
     if (self.errorLabel != nil) {
         self.errorLabel.font = _errorFont;
     }
@@ -197,7 +241,7 @@ NSString *const selectionRangeKey = @"selectionRange";
         return NO;
     }
     NSString *text = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    
+
     if (self.maskPattern) {
         textField.text = [text maskWithPattern:self.maskPattern];
     } else if (self.maxCharacters > 0) {
@@ -207,11 +251,11 @@ NSString *const selectionRangeKey = @"selectionRange";
     } else {
         textField.text = text;
     }
-    
+
     if(![NSString isNullOrEmpty:textField.text] && (self.errorLabel && !self.errorLabel.isHidden)) {
         [self setError:NO];
     }
-    
+
     return NO;
 }
 
@@ -286,9 +330,7 @@ NSString *const selectionRangeKey = @"selectionRange";
 }
 
 - (void)drawRect:(CGRect)rect {
-    if (_hasBorder) {
-        [self.layer addSublayer:self.border];
-    }
+    [self updateTextField:CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetWidth(rect), CGRectGetHeight(rect))];
 }
 
 
