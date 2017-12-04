@@ -77,7 +77,7 @@ NSString *const selectionRangeKey = @"selectionRange";
     if (self.border.superlayer != nil) {
         self.border.frame = ({
             CGRect frame = self.border.frame;
-            frame.size = CGSizeMake(self.frame.size.width, CGRectGetMaxY(self.frame) - 1);
+            frame.size = CGSizeMake(self.frame.size.width, 1);
             frame;
         });
         return;
@@ -87,7 +87,7 @@ NSString *const selectionRangeKey = @"selectionRange";
     self.border.frame = ({
         CGRect frame = self.border.frame;
         frame.origin = CGPointMake(self.bounds.origin.x, CGRectGetMaxY(self.bounds) - 1);
-        frame.size = CGSizeMake(self.bounds.size.width, CGRectGetMaxY(self.bounds) - 1);
+        frame.size = CGSizeMake(self.bounds.size.width, 1);
         frame;
     });
 
