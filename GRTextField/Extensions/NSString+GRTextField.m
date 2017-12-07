@@ -30,7 +30,7 @@
     return self;
 }
 
-+ (BOOL)isNullOrEmpty:(NSString *)string {
++ (BOOL)GRIsNullOrEmpty:(NSString *)string {
     if (string == nil || ![string isKindOfClass:[NSString class]] || [string isEqualToString:@""] || [string isEqualToString:@"null"]) {
         return YES;
     }

@@ -26,6 +26,7 @@ NSString *const selectionRangeKey = @"selectionRange";
 -(void)awakeFromNib {
     [super awakeFromNib];
     [super setDelegate:self];
+    self.isValid = YES;
     [self initialization];
     [self layoutSubviews];
 }
@@ -49,7 +50,6 @@ NSString *const selectionRangeKey = @"selectionRange";
 }
 
 -(void)initialization {
-    self.isValid = YES;
     [self addBottomLine];
     if (self.hasBorder) {
         self.borderStyle = UITextBorderStyleNone;
@@ -60,15 +60,16 @@ NSString *const selectionRangeKey = @"selectionRange";
     }
 
     if (self.errorLabel) {
-        BOOL isEmpty = [NSString isNullOrEmpty:self.hintText];
+        BOOL isEmpty = [NSString GRIsNullOrEmpty:self.hintText];
+        if (self.isValid) {
+            self.errorLabel.text = self.hintText;
+            self.errorLabel.numberOfLines = 0;
+            self.errorLabel.lineBreakMode = NSLineBreakByWordWrapping;
 
-        self.errorLabel.text = self.hintText;
-        self.errorLabel.numberOfLines = 0;
-        self.errorLabel.lineBreakMode = NSLineBreakByWordWrapping;
-
-        [self.errorLabel setHidden:isEmpty];
-        if (isEmpty) {
-            self.errorLabel.textColor = self.errorBorderColor;
+            [self.errorLabel setHidden:isEmpty];
+            if (isEmpty) {
+                self.errorLabel.textColor = self.errorBorderColor;
+            }
         }
     }
 }
@@ -110,14 +111,14 @@ NSString *const selectionRangeKey = @"selectionRange";
 
     [self setColorsOfField];
 
-    BOOL isValidAndEmpty = _isValid && [NSString isNullOrEmpty:self.hintText];
+    BOOL isValidAndEmpty = _isValid && [NSString GRIsNullOrEmpty:self.hintText];
 
     [self.errorLabel setHidden:isValidAndEmpty];
 }
 
 -(void)setMaskPattern:(NSString *)maskPattern {
     _maskPattern = maskPattern;
-    if (![NSString isNullOrEmpty:maskPattern]) {
+    if (![NSString GRIsNullOrEmpty:maskPattern]) {
         self.keyboardType = UIKeyboardTypeNumberPad;
     }
 }
@@ -218,7 +219,7 @@ NSString *const selectionRangeKey = @"selectionRange";
     if ([self.extension respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
         [self.extension textFieldDidBeginEditing:textField];
     }
-    if (![NSString isNullOrEmpty:textField.text]) {
+    if (![NSString GRIsNullOrEmpty:textField.text]) {
         [self setColorsOfField];
     }
 }
@@ -234,7 +235,7 @@ NSString *const selectionRangeKey = @"selectionRange";
     if ([self.extension respondsToSelector:@selector(textFieldDidEndEditing:)]) {
         [self.extension textFieldDidEndEditing:textField];
     }
-    [self setColorsOfField];
+    [self setError:[NSString GRIsNullOrEmpty:textField.text]];
 }
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -254,7 +255,7 @@ NSString *const selectionRangeKey = @"selectionRange";
         textField.text = text;
     }
 
-    if(![NSString isNullOrEmpty:textField.text] && (self.errorLabel && !self.errorLabel.isHidden)) {
+    if(![NSString GRIsNullOrEmpty:textField.text] && (self.errorLabel && !self.errorLabel.isHidden)) {
         [self setError:NO];
     }
 
@@ -322,7 +323,7 @@ NSString *const selectionRangeKey = @"selectionRange";
 }
 
 - (void)setErrorWithMessage:(NSString *)message {
-    self.isValid = [NSString isNullOrEmpty:message];
+    self.isValid = [NSString GRIsNullOrEmpty:message];
     if (!self.isValid) {
         self.errorLabel.text = message;
     } else {
