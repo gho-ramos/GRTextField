@@ -12,6 +12,6 @@ notifications:
     on_success: always
     template:
       - "%{repository}"
-      - 'Commit nº: %{commit}'
+      - 'Commit: %{commit}'
       - 'Message: %{message}'
       - 'Build details: %{build_url}'

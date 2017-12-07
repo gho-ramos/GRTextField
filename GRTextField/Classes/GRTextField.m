@@ -75,24 +75,12 @@ NSString *const selectionRangeKey = @"selectionRange";
 }
 
 - (void)addBottomLine {
-    if (self.border.superlayer != nil) {
-        self.border.frame = ({
-            CGRect frame = self.border.frame;
-            frame.size = CGSizeMake(self.frame.size.width, 1);
-            frame;
-        });
-        return;
-    }
-    self.border = [CALayer new];
-    self.border.backgroundColor = self.borderColor.CGColor;
     self.border.frame = ({
         CGRect frame = self.border.frame;
         frame.origin = CGPointMake(self.bounds.origin.x, CGRectGetMaxY(self.bounds) - 1);
         frame.size = CGSizeMake(self.bounds.size.width, 1);
         frame;
     });
-
-    [self.layer addSublayer:self.border];
 }
 
 -(void) updateTextField:(CGRect)frame {
@@ -130,7 +118,8 @@ NSString *const selectionRangeKey = @"selectionRange";
 -(CALayer *)border {
     if (!_border) {
         _border = [CALayer new];
-        _border.masksToBounds = YES;
+        _border.backgroundColor = self.borderColor.CGColor;
+        [self.layer addSublayer:_border];
     }
     return _border;
 }
@@ -274,6 +263,15 @@ NSString *const selectionRangeKey = @"selectionRange";
         return [self.extension textFieldShouldReturn:textField];
     }
     return YES;
+}
+
+#pragma mark - Overriden Methods
+-(CGRect)textRectForBounds:(CGRect)bounds {
+    return CGRectInset(bounds, self.textInsets.x, self.textInsets.y);
+}
+
+-(CGRect)editingRectForBounds:(CGRect)bounds {
+    return CGRectInset(bounds, self.textInsets.x, self.textInsets.y);
 }
 
 #pragma mark -
