@@ -23,7 +23,7 @@
  @param string The string that will be checked
  @return A boolean value indicating wether the string is null or empty
  */
-+(BOOL)isNullOrEmpty:(NSString*)string;
++(BOOL)GRIsNullOrEmpty:(NSString*)string;
 
 /**
  Transforms the string (numeric values) to match the pattern provided
