@@ -218,7 +218,9 @@ NSString *const selectionRangeKey = @"selectionRange";
     if ([self.extension respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
         [self.extension textFieldDidBeginEditing:textField];
     }
-    [self setColorsOfField];
+    if (![NSString isNullOrEmpty:textField.text]) {
+        [self setColorsOfField];
+    }
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
