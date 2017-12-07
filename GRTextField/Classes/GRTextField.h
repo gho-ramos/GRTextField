@@ -65,6 +65,11 @@ IB_DESIGNABLE @interface GRTextField : UITextField <ErrorTextFieldProtocol>
 @property (nonatomic, strong) IBInspectable UIColor *selectedBorderColor;
 
 /**
+ Set field text insets for height and width
+ */
+@property (nonatomic) IBInspectable CGPoint textInsets;
+
+/**
  IBOutlet to define an error message for the field
  */
 @property (nonatomic, strong) IBOutlet UILabel* errorLabel;
