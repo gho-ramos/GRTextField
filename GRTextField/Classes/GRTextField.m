@@ -327,7 +327,6 @@ NSString *const selectionRangeKey = @"selectionRange";
     } else {
         self.errorLabel.text = self.hintText;
     }
-    [self resizeErrorLabelToFit];
 }
 
 - (void)drawRect:(CGRect)rect {

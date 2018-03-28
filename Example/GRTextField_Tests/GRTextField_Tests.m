@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <GRTextField/GRTextField.h>
 #import <GRTextField/NSString+GRTextField.h>
 
 @import Nimble;
@@ -26,7 +27,7 @@
 }
 
 - (void)testStringNullability {
-    expect([NSString isNullOrEmpty:nil]).to(equal(true));
+    expect([NSString GRIsNullOrEmpty:nil]).to(equal(true));
 }
 
 - (void)testStringMaskPattern {
@@ -41,6 +42,12 @@
     NSString * datevalue = @"0102";
     NSString * masked = [datevalue maskWithPattern:pattern];
     expect([masked grUnmaskedString]).to(equal(datevalue));
+}
+
+-(void)testGRTextFieldKeyBoardType {
+    GRTextField * textField = [GRTextField new];
+    textField.maskPattern = @"##/##";
+    expect(@(textField.keyboardType)).to(equal(@(UIKeyboardTypeNumberPad)));
 }
 
 @end
