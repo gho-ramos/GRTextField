@@ -1,5 +1,5 @@
 PODS:
-  - GRTextField (1.2.0)
+  - GRTextField (1.2.1)
   - Nimble (7.0.2)
 
 DEPENDENCIES:
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GRTextField: 5146ad6b4d539c053c8439dfd78724cb49075aca
+  GRTextField: 72903fb5166d84e6deb07d1ec76d46c2a1dfd903
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
 
 PODFILE CHECKSUM: 6ab4b08770c1a2b627b64c9edf0df6269bf2a76d
