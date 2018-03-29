@@ -16,15 +16,16 @@
 
 @implementation GRViewController
 
-- (void)viewDidLoad {
+- (void) viewDidLoad {
     [super viewDidLoad];
     self.textField.text = @"Text";
+    self.textField.enabled = NO;
     self.textField.errorFont = [UIFont systemFontOfSize:10];
 }
 
 #pragma mark -
 #pragma mark - Methods
--(void)validate {
+-(void) validate {
     [self.textField setError:(self.textField.text.length < 1)];
     
     self.unmaskedLabel.text = [self.textField unmaskedText];
