@@ -91,12 +91,6 @@ IB_DESIGNABLE @interface GRTextField : UITextField <ErrorTextFieldProtocol>
 @property (nonatomic, assign) BOOL isValid;
 
 /**
- Set field status and change it's style
- defaults to YES;
- */
-@property (nonatomic, assign) BOOL enabledField;
-
-/**
  Set error message / key GRTextField's error label
  
  @param visible show field or not

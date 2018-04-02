@@ -17,7 +17,6 @@
 @implementation GRTextField
 @synthesize key = _key;
 @synthesize border = _border;
-@synthesize enabled = _enabled;
 @synthesize errorFont = _errorFont;
 @synthesize borderColor = _borderColor;
 @synthesize errorBorderColor = _errorBorderColor;
@@ -156,21 +155,6 @@ NSString *const selectionRangeKey = @"selectionRange";
 
 -(void)setSelectedBorderColor:(UIColor *)selectedBorderColor {
     _selectedBorderColor = selectedBorderColor;
-}
-
--(void)setEnabled:(BOOL)enabled {
-    _enabled = enabled;
-    if (_enabled) {
-        self.textColor = [UIColor blackColor];
-        self.border.backgroundColor = self.borderColor.CGColor;
-    } else {
-        self.textColor = self.borderColor;
-        self.border.backgroundColor = self.borderColor.CGColor;
-    }
-}
-
--(void)setEnabledField:(BOOL)enabledField {
-    self.enabled = enabledField;
 }
 
 -(UIFont *)errorFont {
