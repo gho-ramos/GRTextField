@@ -1,6 +1,6 @@
 # GRTextField
 
-[![CI Status](http://img.shields.io/travis/gho-ramos/GRTextField.svg?style=flat)](https://travis-ci.org/pogramos/GRTextField)
+[![Build Status](https://travis-ci.org/pogramos/GRTextField.svg?branch=master)](https://travis-ci.org/pogramos/GRTextField)
 [![Version](https://img.shields.io/cocoapods/v/GRTextField.svg?style=flat)](http://cocoapods.org/pods/GRTextField)
 [![License](https://img.shields.io/cocoapods/l/GRTextField.svg?style=flat)](http://cocoapods.org/pods/GRTextField)
 [![Platform](https://img.shields.io/cocoapods/p/GRTextField.svg?style=flat)](http://cocoapods.org/pods/GRTextField)
