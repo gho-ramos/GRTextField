@@ -19,7 +19,7 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     self.textField.text = @"Text";
-    self.textField.enabled = NO;
+//    self.textField.enabled = NO;
     self.textField.errorFont = [UIFont systemFontOfSize:10];
 }
 
