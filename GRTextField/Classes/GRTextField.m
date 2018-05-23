@@ -119,7 +119,9 @@ NSString *const selectionRangeKey = @"selectionRange";
     if (!_border) {
         _border = [CALayer new];
         _border.backgroundColor = self.borderColor.CGColor;
-        [self.layer addSublayer:_border];
+        if (self.hasBorder) {
+            [self.layer addSublayer:_border];
+        }
     }
     return _border;
 }
